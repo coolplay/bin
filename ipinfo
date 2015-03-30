@@ -1,0 +1,8 @@
+#!/bin/bash
+# Query information for given IP address from ipinfo.io, defaults to localhost
+# http ipinfo.io/$1 -b
+for ip in $@
+do
+    printf "$ip\n"
+    http ipinfo.io/"$ip" -b
+done
